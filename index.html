@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
+  <title>Vinícius Maciel</title>
+</head>
+
+<body x-data="{ darkMode: false }" x-bind:class="darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'">
+
+  <div>
+    <header class="bg-white p-6 shadow-md flex justify-between items-center" :class="darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'">
+        <div class="flex items-center space-x-4">
+          <!-- Foto na Navbar -->
+          <img src="Imagem do WhatsApp de 2025-03-30 à(s) 11.29.31_30d12ef0.jpg" alt="Foto de Vinícius Maciel" class="w-12 h-12 rounded-full object-cover">
+          <a href="#" class="text-3xl font-semibold">
+            Vinícius Maciel
+          </a>
+        </div>
+        <nav>
+          <ul class="flex space-x-6 text-lg">
+            <li><a href="#about" class="hover:text-indigo-500">Sobre Mim</a></li>
+            <li><a href="#projects" class="hover:text-indigo-500">Projetos</a></li>
+            <li><a href="#contact" class="hover:text-indigo-500">Certificados</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+    <!-- Botão de Dark Mode -->
+<div class="absolute top-28 right-6">
+    <button 
+      @click="darkMode = !darkMode" 
+      class="px-4 py-2 rounded text-white shadow-md" 
+      :class="darkMode ? 'bg-indigo-500 hover:bg-indigo-400' : 'bg-indigo-600 hover:bg-indigo-500'">
+      Dark Mode
+    </button>
+  </div>
+  
+
+    <!-- Seção de Introdução -->
+    <section class="py-24 text-center px-4" :class="darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold">
+          Olá, sou <span class="text-indigo-500">Vinícius Maciel</span>
+        </h1>
+        <p class="text-xl mt-4 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-700'">
+          Desenvolvedor apaixonado por criar soluções inovadoras. Explore meus projetos e certificações abaixo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about" class="py-8 text-center" :class="darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-bold">Sobre Mim</h2>
+        <p class="mt-4 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-700'">
+          Sou Vinícius Maciel, tenho 17 anos e sou natural de São Miguel, RN. Atualmente, estou cursando o 3º ano do técnico em Desenvolvimento de Sistemas. Acredito que a comunicação, resiliência e o trabalho em equipe são essenciais para o meu crescimento. Estou em busca constante de aprendizado e evolução.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div class="flex flex-col justify-center">
+            <h3 class="text-2xl font-semibold mb-4">Minha Jornada</h3>
+            <p class="text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-700'">
+                Embora esteja começando minha carreira, já participei de diversos projetos acadêmicos e desafios de programação, onde pude aplicar e aprimorar minhas habilidades em desenvolvimento de sistemas.
+            </p>
+          </div>
+          <div class="flex justify-center items-center">
+            <img src="Imagem do WhatsApp de 2025-03-30 à(s) 11.29.31_30d12ef0.jpg" alt="Foto de Vinícius Maciel" class="w-48 h-48 object-cover rounded-full shadow-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="py-24 text-center" :class="darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-bold">Meus Projetos</h2>
+        <p class="mt-4 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-700'">Aqui estão alguns dos projetos em que trabalhei e que me orgulho.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Imagem do WhatsApp de 2025-04-02 à(s) 20.59.44_b2aac142.jpg" alt="Projeto 1" class="w-full rounded-md">
+            <h3 class="text-xl font-semibold mt-4">Smart Cart</h3>
+            <p class="mt-2 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-600'">O Smart Cart é um carrinho autônomo programável desenvolvido com Arduino, utilizando sensores de proximidade para identificar objetos ou obstáculos em seu caminho. Quando o carrinho encontra um obstáculo, ele é capaz de processar essas informações e calcular em tempo real o melhor trajeto para continuar sua jornada, evitando colisões e otimizando seu percurso.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Imagem do WhatsApp de 2025-04-02 à(s) 20.59.48_d02ec130.jpg" alt="Projeto 2" class="w-full rounded-md">
+            <h3 class="text-xl font-semibold mt-4">AHF</h3>
+            <p class="mt-2 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-600'">O Alfa Host Fitness (AHF) é um sistema de gestão para academias desenvolvido em grupo, projetado para otimizar a experiência tanto para os usuários quanto para os administradores. Neste sistema, os usuários podem realizar agendamentos de aulas, consultar suas medidas corporais e acompanhar seu desempenho físico ao longo do tempo.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Imagem do WhatsApp de 2025-04-02 à(s) 20.59.52_35ccd1ad.jpg" alt="Projeto 3" class="w-full rounded-md">
+            <h3 class="text-xl font-semibold mt-4">Direto ao Ponto</h3>
+            <p class="mt-2 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-600'">Direto ao Ponto é um sistema de reclamação desenvolvido para dar voz às pessoas que enfrentam problemas como lixo nas ruas, buracos nas estradas, encanamentos quebrados, entre outros problemas urbanos. Inspirado no modelo de sites como o Reclame Aqui, o nosso objetivo é criar uma plataforma simples e direta, onde cidadãos podem relatar essas questões e buscar soluções rápidas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Certificados -->
+    <section id="contact" class="py-24 text-center" :class="darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-bold">Meus Certificados</h2>
+        <p class="mt-4 text-justify" :class="darkMode ? 'text-gray-300' : 'text-gray-700'">Confira os certificados que conquistei ao longo da minha jornada.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Captura de tela 2025-03-30 124043.png" alt="Certificado 1" class="w-full rounded-md">
+            <p class="text-xl font-semibold mt-4">Certificado de Curso 5G Básico e Avançado - Huawei.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Captura de tela 2025-04-01 203445.png" alt="Certificado 2" class="w-full rounded-md">
+            <p class="text-xl font-semibold mt-4">Certificado de Curso de Desenvolvimento Pessoal - Fundação Bradesco.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg" :class="darkMode ? 'bg-gray-800' : 'bg-white'">
+            <img src="Captura de tela 2025-04-01 203328.png" alt="Certificado 3" class="w-full rounded-md">
+            <p class="text-xl font-semibold mt-4">Certificado de Curso de Organização Pessoal - Fundação Bradesco.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-white text-center py-6 shadow-md" :class="darkMode ? 'bg-gray-800 text-gray-300' : 'bg-white text-gray-600'">
+      <div class="flex justify-center space-x-6 mb-2">
+        <a href="mailto:vinicius.macielxs@gmail.com" class="hover:text-indigo-500">Email</a>
+        <a href="tel:+5584992290057" class="text-gray-600 hover:text-indigo-500">Contato</a>
+        <a href="https://www.linkedin.com/in/vinícius-maciel-ba61a0350" class="text-gray-600 hover:text-indigo-500" target="_blank">LinkedIn</a>
+      </div>
+      <p class="text-gray-600">&copy; 2025 Meu Portfólio - Todos os direitos reservados</p>
+    </footer>    
+    </div>
+  
+  </body>
+  </html>
